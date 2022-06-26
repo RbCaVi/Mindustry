@@ -100,6 +100,9 @@ public class ErekirTechTree{
                 });
 
                 node(reinforcedPayloadConveyor, Seq.with(new OnSector(four)), () -> {
+                    node(largeReinforcedPayloadConveyor), () -> {
+
+                    }
                     //TODO should only be unlocked in unit sector
                     node(constructor, Seq.with(new Research(siliconArcFurnace), new OnSector(four)), () -> {
                         node(payloadMassDriver, Seq.with(new OnSector(four)), () -> {
@@ -126,7 +129,9 @@ public class ErekirTechTree{
                     });
 
                     node(reinforcedPayloadRouter, () -> {
+                        node(largeReinforcedPayloadRouter, () -> {
 
+                        });
                     });
                 });
             });
