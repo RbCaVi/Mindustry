@@ -47,8 +47,13 @@ public class SerpuloTechTree{
                                 });
 
                                 node(payloadConveyor, () -> {
-                                    node(payloadRouter, () -> {
+                                    node(largePayloadConveyor, () -> {
 
+                                    });
+                                    node(payloadRouter, () -> {
+                                        node(LargePayloadRouter, () -> {
+
+                                        });
                                     });
                                 });
 
