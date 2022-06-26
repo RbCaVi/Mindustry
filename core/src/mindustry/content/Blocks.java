@@ -4604,6 +4604,38 @@ public class Blocks{
             underBullets = true;
         }};
 
+        largePayloadConveyor = new PayloadConveyor("large-payload-conveyor"){{
+            requirements(Category.units, with(Items.graphite, 20, Items.copper, 20));
+            size = 5;
+            canOverdrive = false;
+        }};
+
+        largePayloadRouter = new PayloadRouter("large-payload-router"){{
+            requirements(Category.units, with(Items.graphite, 30, Items.copper, 20));
+            size = 5;
+            canOverdrive = false;
+        }};
+
+        largePeinforcedPayloadConveyor = new PayloadConveyor("large-reinforced-payload-conveyor"){{
+            requirements(Category.units, with(Items.tungsten, 20));
+            size = 5;
+            moveTime = 35f;
+            canOverdrive = false;
+            health = 800;
+            researchCostMultiplier = 4f;
+            underBullets = true;
+        }};
+
+        largePeinforcedPayloadRouter = new PayloadRouter("large-reinforced-payload-router"){{
+            requirements(Category.units, with(Items.tungsten, 30));
+            size = 5;
+            moveTime = 35f;
+            health = 800;
+            canOverdrive = false;
+            researchCostMultiplier = 4f;
+            underBullets = true;
+        }};
+
         payloadMassDriver = new PayloadMassDriver("payload-mass-driver"){{
             requirements(Category.units, with(Items.tungsten, 120, Items.silicon, 120, Items.oxide, 25));
             regionSuffix = "-dark";
