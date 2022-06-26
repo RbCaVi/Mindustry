@@ -153,7 +153,7 @@ public class Blocks{
     unitRepairTower,
 
     //payloads
-    payloadConveyor, payloadRouter, reinforcedPayloadConveyor, reinforcedPayloadRouter, payloadMassDriver, payloadPropulsionTower, smallDeconstructor, deconstructor, constructor, largeConstructor, payloadLoader, payloadUnloader,
+    payloadConveyor, payloadRouter, reinforcedPayloadConveyor, reinforcedPayloadRouter, largePayloadConveyor, largePayloadRouter, largeReinforcedPayloadConveyor, largeReinforcedPayloadRouter, payloadMassDriver, payloadPropulsionTower, smallDeconstructor, deconstructor, constructor, largeConstructor, payloadLoader, payloadUnloader,
     
     //logic
     message, switchBlock, microProcessor, logicProcessor, hyperProcessor, largeLogicDisplay, logicDisplay, memoryCell, memoryBank,
@@ -4616,7 +4616,7 @@ public class Blocks{
             canOverdrive = false;
         }};
 
-        largePeinforcedPayloadConveyor = new PayloadConveyor("large-reinforced-payload-conveyor"){{
+        largeReinforcedPayloadConveyor = new PayloadConveyor("large-reinforced-payload-conveyor"){{
             requirements(Category.units, with(Items.tungsten, 20));
             size = 5;
             moveTime = 35f;
@@ -4626,7 +4626,7 @@ public class Blocks{
             underBullets = true;
         }};
 
-        largePeinforcedPayloadRouter = new PayloadRouter("large-reinforced-payload-router"){{
+        largeReinforcedPayloadRouter = new PayloadRouter("large-reinforced-payload-router"){{
             requirements(Category.units, with(Items.tungsten, 30));
             size = 5;
             moveTime = 35f;
