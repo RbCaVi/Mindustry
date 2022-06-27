@@ -4607,18 +4607,21 @@ public class Blocks{
         largePayloadConveyor = new PayloadConveyor("large-payload-conveyor"){{
             requirements(Category.units, with(Items.graphite, 20, Items.copper, 20));
             size = 5;
+            payloadLimit = 5;
             canOverdrive = false;
         }};
 
         largePayloadRouter = new PayloadRouter("large-payload-router"){{
             requirements(Category.units, with(Items.graphite, 30, Items.copper, 20));
             size = 5;
+            payloadLimit = 5;
             canOverdrive = false;
         }};
 
         largeReinforcedPayloadConveyor = new PayloadConveyor("large-reinforced-payload-conveyor"){{
             requirements(Category.units, with(Items.tungsten, 20));
             size = 5;
+            payloadLimit = 5;
             moveTime = 35f;
             canOverdrive = false;
             health = 800;
@@ -4629,6 +4632,7 @@ public class Blocks{
         largeReinforcedPayloadRouter = new PayloadRouter("large-reinforced-payload-router"){{
             requirements(Category.units, with(Items.tungsten, 30));
             size = 5;
+            payloadLimit = 5;
             moveTime = 35f;
             health = 800;
             canOverdrive = false;
