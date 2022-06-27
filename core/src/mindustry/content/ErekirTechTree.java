@@ -100,9 +100,9 @@ public class ErekirTechTree{
                 });
 
                 node(reinforcedPayloadConveyor, Seq.with(new OnSector(four)), () -> {
-                    node(largeReinforcedPayloadConveyor), () -> {
+                    node(largeReinforcedPayloadConveyor, () -> {
 
-                    }
+                    });
                     //TODO should only be unlocked in unit sector
                     node(constructor, Seq.with(new Research(siliconArcFurnace), new OnSector(four)), () -> {
                         node(payloadMassDriver, Seq.with(new OnSector(four)), () -> {
@@ -110,9 +110,9 @@ public class ErekirTechTree{
                             node(payloadLoader, () -> {
                                 node(payloadUnloader, () -> {
                                     //TODO replace.
-                                    //node(payloadPropulsionTower, () -> {
+                                    node(payloadPropulsionTower, () -> {
 
-                                    //});
+                                    });
                                 });
                             });
 
@@ -225,8 +225,8 @@ public class ErekirTechTree{
                             node(slagIncinerator, Seq.with(new OnSector(four)), () -> {
 
                                 //TODO these are unused.
-                                //node(slagCentrifuge, () -> {});
-                                //node(heatReactor, () -> {});
+                                node(slagCentrifuge, () -> {});
+                                node(heatReactor, () -> {});
                             });
                         });
                     });
@@ -365,7 +365,7 @@ public class ErekirTechTree{
                 nodeProduce(Items.sand, () -> {
                     nodeProduce(Items.silicon, () -> {
                         nodeProduce(Items.oxide, () -> {
-                            //nodeProduce(Items.fissileMatter, () -> {});
+                            nodeProduce(Items.fissileMatter, () -> {});
                         });
                     });
                 });
@@ -402,7 +402,7 @@ public class ErekirTechTree{
                                     });
                                 });
 
-                                //nodeProduce(Liquids.gallium, () -> {});
+                                nodeProduce(Liquids.gallium, () -> {});
                             });
                         });
                     });
