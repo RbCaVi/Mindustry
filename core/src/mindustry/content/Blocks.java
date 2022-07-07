@@ -2252,7 +2252,7 @@ public class Blocks{
             schematicPriority = -15;
         }};
 
-        diode = new PowerDiode("diode"){{
+        diode = new PowerDiode("battery-diode"){{
             requirements(Category.power, with(Items.silicon, 10, Items.plastanium, 5, Items.metaglass, 10));
         }};
 
