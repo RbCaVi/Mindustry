@@ -1021,7 +1021,7 @@ public class LExecutor{
         @Override
         public void run(LExecutor exec){
 
-            if(exec.building(target) instanceof MessageBuild d && d.team == exec.team){
+            if(exec.building(target) instanceof MessageBuild d && (d.team == exec.team || exec.privileged)){
 
                 d.message.setLength(0);
                 d.message.append(exec.textBuffer, 0, Math.min(exec.textBuffer.length(), maxTextBuffer));
@@ -1331,8 +1331,7 @@ public class LExecutor{
             if(exec.obj(type) instanceof UnitType type && !type.hidden && t != null && Units.canCreate(t, type)){
                 //random offset to prevent stacking
                 var unit = type.spawn(t, World.unconv(exec.numf(x)) + Mathf.range(0.01f), World.unconv(exec.numf(y)) + Mathf.range(0.01f));
-                unit.rotation = exec.numf(rotation);
-                spawner.spawnEffect(unit);
+                spawner.spawnEffect(unit, exec.numf(rotation));
                 exec.setobj(result, unit);
             }
         }
